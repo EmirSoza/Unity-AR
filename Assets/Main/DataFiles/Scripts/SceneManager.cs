@@ -20,6 +20,11 @@ public class SceneManager : ScriptableObject
         return UnityEngine.SceneManagement.SceneManager.GetActiveScene();
     }
 
+    public void QuitApp()
+    {
+        Application.Quit();
+    }
+
     public void LoadScene(int buildIndex)
     {
         if (!initialized) Init();
