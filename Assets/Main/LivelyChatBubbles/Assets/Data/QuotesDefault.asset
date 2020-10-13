@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5408303ffe55a4047ad99b245fddb9f6, type: 3}
+  m_Name: QuotesDefault
+  m_EditorClassIdentifier: 
+  Values:
+  - I don't hire anybody who's not brighter than I am. If they're not brighter than
+    I am, I don't need them.
+  - Exercise ferments the humors, casts them into their proper channels, throws off
+    redundancies, and helps nature in those secret distributions, without which the
+    body cannot subsist in its vigor, nor the soul act with cheerfulness.
+  - It has been said that man is a rational animal. All my life I have been searching
+    for evidence which could support this.
+  - Painting is an attempt to come to terms with life. There are as many solutions
+    as there are human beings.
+  - Without freedom from the past, there is no freedom at all, because the mind is
+    never new, fresh, innocent.
+  - A great leader never sets himself above his followers except in carrying responsibilities.
+  - Forget about style; worry about results.
+  - It takes as much imagination to create debt as to create income.
+  - If people have to choose between freedom and sandwiches, they will take sandwiches.
+  - Undertake something that is difficult; it will do you good. Unless you try to
+    do something beyond what you have already mastered, you will never grow.

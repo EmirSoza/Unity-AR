@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Main/Scenes/MainScene.unity
+    guid: 70a9691d4d1e50648a986f7ba521487f
+  - enabled: 1
+    path: Assets/Main/Scenes/MissionScene.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Main/Scenes/ImageTrack.unity
+    guid: c5633c5dd1eaddf4ab5995534d042779
+  m_configObjects:
+    UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: fbea3df68b5ae406f9a7d3e431acd703,
+      type: 2}
+    UnityEditor.XR.ARKit.ARKitSettings: {fileID: 11400000, guid: d74fa0b019009447caae403bab150e32,
+      type: 2}
+    com.unity.xr.arkit.PlayerSettings: {fileID: 11400000, guid: 2d5fb8e61571b4e3897f221189089fd6,
+      type: 2}
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: d5795d652ca604ecab518b774ff7e263,
+      type: 2}

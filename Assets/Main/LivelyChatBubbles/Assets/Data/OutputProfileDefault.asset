@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32c29e4707f410447a0263d1efbc2d0e, type: 3}
+  m_Name: OutputProfileDefault
+  m_EditorClassIdentifier: 
+  InitialDelay: 0.2
+  CharactersPerSecond: 60
+  CompletionClick: 1
+  CompletionDelay: 0
+  CharactersForLongDelay: 2e0021003f00
+  LongCharacterDelay: 0.4
+  CharactersForShortDelay: 2c003b003a00
+  ShortCharacterDelay: 0.2
