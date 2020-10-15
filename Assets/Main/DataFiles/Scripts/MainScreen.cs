@@ -13,28 +13,43 @@ namespace Knife.HologramEffect
 
         [SerializeField] private GameObjectsGroup[] gameGroups;
 
+        [SerializeField] private GameObjectsGroup[] missions;
 
 
+        public string[] answers;
+        public string answer;
         private int currentGroup;
-
+        private int currentGameGroup;
         private int currentMission;
 
 
 
         private void Start()
         {
-
-
+            currentGameGroup = 0;
             currentMission = 0;
             currentGroup = 0;
+            if (PlayerPrefs.HasKey("mission")) {
+                currentMission = PlayerPrefs.GetInt("mission");
+                currentGroup = PlayerPrefs.GetInt("group");
+                currentGameGroup = PlayerPrefs.GetInt("gameGroup");
+                
+            }
+           
+                
 
-            OpenCurrent();
-
-
-
+                OpenCurrent();
+          
 
         }
 
+        private void OnApplicationQuit()
+        {
+            currentGameGroup = 0;
+            currentMission = 0;
+            currentGroup = 0;
+            PlayerPrefs.DeleteAll();
+        }
 
 
         private void Update()
@@ -49,6 +64,11 @@ namespace Knife.HologramEffect
                 Previous();
 
             }
+        }
+
+        public void Lagre(string value)
+        {
+            PlayerPrefs.SetString("name", value);
         }
 
 
@@ -91,7 +111,33 @@ namespace Knife.HologramEffect
 
         public void SetCurrentMission(int mission)
         {
-            currentMission = mission;
+            if (mission < currentMission) {
+                currentMission = mission;
+                OpenCurrent();
+            }
+            else if (mission > currentMission && answers[currentMission] == answer)
+            {
+                currentMission = mission;
+                OpenCurrent();
+            }
+
+            
+        }
+
+        public void ZeroizeNumbers()
+        {
+            SetCurrentGameGroup(0);
+            SetCurrentGroup(0);
+            SetCurrentMission(0);
+        }
+        public void SetAnswer(string a)
+        {
+            answer = a;
+        }
+
+        public void SetCurrentGameGroup(int gameGroup)
+        {
+            currentGameGroup = gameGroup;
             OpenCurrent();
         }
 
@@ -105,14 +151,30 @@ namespace Knife.HologramEffect
                 g.SetActive(false);
             }
             groups[currentGroup].SetActive(true);
+            PlayerPrefs.SetInt("group", currentGroup);
+
             if (currentGroup == 1)
             {
                 foreach (var g in gameGroups)
                 {
                     g.SetActive(false);
                 }
-                gameGroups[currentMission].SetActive(true);
-            }
+                gameGroups[currentGameGroup].SetActive(true);
+                PlayerPrefs.SetInt("gameGroup", currentGameGroup);
+
+
+                if (currentGameGroup == 1)
+                {
+                    foreach (var g in missions)
+                    {
+                        g.SetActive(false);
+                    }
+                    missions[currentMission].SetActive(true);
+                    PlayerPrefs.SetInt("mission", currentMission);
+
+                }
+
+            } 
 
         }
 
